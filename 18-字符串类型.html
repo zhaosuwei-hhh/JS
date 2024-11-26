@@ -1,0 +1,18 @@
+<!-- 单引号、双引号、反引号(`)包裹的内容 -->
+<!-- 单引号/双引号/反引号 会自动去寻找下一个离自己最近的配对 -->
+<!-- 所以要用不同的引号 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    alert('今天特别喜欢“高广源”呀')
+    document.write('今天特别喜欢“高广源”呀')  /* 采用外单内双或外双内单 */
+    document.write('今天特别喜欢\'高广源\'呀')  /* 采用转译符，转译符后面的符号打印出来 */
+  </script>
+</body>
+</html>
