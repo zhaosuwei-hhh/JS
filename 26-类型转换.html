@@ -1,0 +1,63 @@
+<!-- 使用表单、prompt获取过来的数据默认是字符串类型的 -->
+<!-- 用数据转换可以解决这一问题 -->
+
+<!-- 分为隐式转换和显式转换 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 隐式转换
+    // +号两边只要有一个是字符串，都会把另外一个转成字符串
+    // 除了 + 以外的算术运算符比如– * /等都会把数据转成数字类型
+
+
+    console.log('pink' + 2);/* 自动把2转换成字符 */
+    console.log('2' + 2);  /* 自动把2转换成字符 */
+
+    console.log('2' - 2);  /* 自动把'2'转换成数字 */
+    console.log('5' / 2); /* 自动把'5'转换成数字 */
+    console.log('3' * 2);  /* 自动把'3'转换成数字 */
+    // 单独使用加号
+    console.log(+'123');  /* 加号可以把字符串类型转换成数字类型 */
+    console.log(typeof +'123');  /* 加号可以把字符串类型转换成数字类型 */
+    let num = +prompt('请输入你的身高')   /* 可以实现显式转换的第一点 */
+
+    // 显式转换
+    // 1.Number(名称)  将字符串类型转换成数字类型
+    let str = '123'
+    console.log(Number(str));   /* 数字类型是蓝色 */
+    let num1 = prompt('请输入你的年龄')
+    let num2 = Number(prompt('请输入你的薪资'))
+    console.log(num1);
+    console.log(Number(num1));
+    console.log(num2);  /* 转换成了数字类型 */
+
+
+    // 2.parseInt   只保留整数部分
+    // 先转化成数字类型，去掉px，再只保留整数部分
+    document.write(parseInt('12.34px'));
+    document.write(parseInt('abc12.34px'));
+    // 当数字在中间时，无法提出数字，出现NaN
+
+
+
+    // 3.parseFloat  保留小数部分  
+    document.write(parseFloat('12.34px'));
+    document.write(parseFloat('abc12.34px'));
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!--      >  左边是否大于右边 -->
+<!--      <  左边是否小于右边 -->
+<!--      >= 左边是否大于或等于右边 -->
+<!--      <= 左边是否小于或等于右边 -->
+<!--      == 左右两边值是否相等 -->
+<!--      === 左右两边是否类型和值都相等 -->
+<!--     !== 左右两边是否不全等 -->
+<!--     注 =是赋值 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    console.log(4 < 5)
+    console.log(4 > 5)
+    console.log(4 == 5)
+    console.log(4 < '5')  /* 比较运算符有隐式转换，会将字符类型转换成数字类型 */
+    console.log(2 == '2')   /* 两者值是一样的 */
+    console.log(2 === '2')   /* 两者不是完全一样的 */  
+    // 一般选择三等，避免特殊情况
+
+
+    // 字符串也可以比较
+    // A是65  Z是90
+    // a是97  z是122
+    console.log('a' < 'b')
+    console.log('aa' < 'ab')   /* 先比较第一个，如果第一个一样，比较第二个 */
+    console.log('爱' < '老师')  /* 中文比较看拼音 */
+
+
+    // NaN不等于任何值，包括他本身，只要有NaN的一律为false
+    console.log(NaN < 5)
+  </script>
+</body>
+
+</html>

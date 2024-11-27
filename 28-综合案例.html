@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h2 {
+      text-align: center;
+    }
+
+    table,
+    tr,
+    th,
+    td {
+
+      border: 1px black solid;
+    }
+
+    /* 合并相邻边框 */
+    table {
+      height: 80px;
+      margin: auto;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    th {
+      padding: 5px, 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>订单确定</h2>
+
+  <script>
+    // 1.用户输入
+    let price = +prompt('请输入商品价格')
+    let number = +prompt('请输入商品数量')
+    let address = prompt('请输入收货地址')
+    // 2.计算数据
+    let total = price * number
+    // 3.页面打印渲染
+    // 利用模版字符串的方法
+    document.write(`
+    <table>
+    <tr>
+      <th>商品名称</th>
+      <th>商品价格</th>
+      <th>商品数量</th>
+      <th>总价</th>
+      <th>收货地址</th>
+    </tr>
+    <tr>
+      <td>小米青春plus</td>
+      <td>${price}元</td>
+      <td>${number}</td>
+      <td>${total}</td>
+      <td>${address}</td>
+    </tr>
+  </table>
+    `)
+  </script>
+</body>
+
+</html>

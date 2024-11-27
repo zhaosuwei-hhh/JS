@@ -1,0 +1,38 @@
+<!-- 顺序语句、分支语句、循环语句 -->
+ <!-- 分支语句包括 if分支语句  三元运算符  switch语句 -->
+  <!-- if 分为单分支、双分支、多分支 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 单分支语句
+    // 大括号里只有一个语句时，大括号可以省略
+    // ()里面的会被转换成布尔值
+    if(true){
+      console.log('高广源')
+    }
+    //除了0，其他所有数字都为真
+    if (2) {
+        console.log('是猪')
+      }
+
+
+    // 双分支语句
+    let uname=prompt('请输入用户名')
+    let num = prompt('请输入密码')
+    // 字符串，需要用引号
+    if(uname==='pink' && num==='123') {
+       alert('登陆成功')
+    }
+    else {
+      alert('登录失败')
+    }
+  </script>
+</body>
+</html>
