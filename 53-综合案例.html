@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let sum = 100   /* 放在外面，否则while导致每次循环都重置 */
+    while (1) {
+      let question = +prompt(
+        // 只能在模版字符串里这么写
+      `请选择服务：1
+      1.存钱
+      2.取钱
+      3.查询余额
+      4.退出`)
+      if (question === 4) {
+        break
+      }
+
+      // 用switch语句
+      switch (question) {
+        case 1:
+          let num1 = +prompt('请输入存钱金额')
+          sum = sum + num1
+          
+          break
+        case 2:
+          let num2 = +prompt('请输入取钱金额')
+          sum = sum - num2
+          
+          break
+        case 3:
+          alert(`您的余额为${sum}`)
+          break
+
+      }
+      
+    }
+  </script>
+</body>
+
+</html>
