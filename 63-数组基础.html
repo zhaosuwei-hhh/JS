@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 数组的声明
+    // 1.字面量声明数组
+    let arr1 = [1, 2, 3, 'xx']
+    // 2.使用new Array 构造函数声明(麻烦，不推荐)
+    let arr2 = new Array(1, 2, 3, 4)
+
+
+    // 数组的取值,采用下标
+    document.write(arr1[0])
+    document.write(`<br>`)
+
+    // 数组的长度
+    document.write(arr1.length)
+    document.write(`<br>`)
+
+    // 遍历数组
+    // 注意i要从0开始
+    for (let i = 0; i < arr1.length; i++) {
+      document.write(arr1[i])
+    }
+
+  </script>
+</body>
+
+</html>

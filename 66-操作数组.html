@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 1.更改数组
+    let arr1 = [1,'pink',3,4,5,6]
+    arr1[0]=100
+    arr1[1]=5
+    document.write(arr1)
+    // 例如：给所有的数组后面加上老师
+    for(let i=0;i<arr1.length;i++){
+      arr1[i]=arr1[i]+'老师'
+    }
+    document.write(`<br>`)
+    document.write(arr1)
+    document.write(`<br>`)
+
+
+    // 2.新增数组元素
+    let arr2=[1,2,5,9,10,'yy']
+    // 在末尾添加
+    // 在数组的最后添加这一元素，同时会返回数组的最新长度
+    // 可以一次性添加多个，用逗号隔开
+    arr2.push('嘻嘻','xx','hh') 
+    document.write(arr2.push('嘻嘻')) 
+    document.write(`<br>`)
+    document.write(arr2)
+    document.write(`<br>`)
+
+    // 在开头添加
+    arr2.unshift('高广源')
+    document.write(arr2)
+
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    span {
+      display: inline-block;
+      padding: 5px 10px;
+      border: 1px solid black;
+      margin: 2px;
+      border-radius: 5px;
+      box-shadow: 2px 2px 2px pink .4;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    // let row = +prompt('请输入行数')
+    for (let i = 1; i <= 9; i++) {
+      for (let j = 1; j <= i; j++) {
+        document.write(`<span>${j} × ${i} = ${i*j}</span>`)
+      }
+      document.write(`<br>`)
+    }
+  </script>
+</body>
+
+</html>
