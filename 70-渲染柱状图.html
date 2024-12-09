@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+
+      display: flex;
+      width: 700px;
+      height: 300px;
+      border-left: lpx solid pink;
+      border-bottom: 1px solid pink;
+      margin: 50px auto;
+      justify-content: space-around;
+      align-items: flex-end;
+      /* 侧对齐-底部对齐 */
+      text-align: center;
+    }
+
+    .box>div {
+      display: flex;
+      width: 50px;
+      background-color: pink;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .box div span {
+      margin-top: -20px;
+    }
+
+    .box div h4 {
+      margin-bottom: -35px;
+      width: 70px;
+      margin-left: -10px;
+    }
+  </style>
+</head>
+
+<body>
+
+    <script>
+      let arr = []
+      for (let i = 1; i <= 4; i++) {
+        let number = +prompt(`请输入第${i}季度的数据:`)//用模版字符串时，要记得两端是反引号
+        arr.push(number)
+        //arr.push(+prompt(`请输入第${i}季度的数据:`))  写到一个中去
+      }
+      //1.盒子开头
+      document.write(`<div class="box">`)
+
+      //2.盒子中间  利用循环，改成活数据
+      for (let i = 0; i < arr.length; i++) {  //这里的i只在这个循环里有值，不会与上面的重复
+        document.write(`
+        <div style="height : ${arr[i]}px ; ">
+             <span>${arr[i]}</span>
+             <h4>第${i+1}季度</h4>
+             </div>`)
+      }
+      //3.盒子结尾
+      document.write(`</div>`)
+    </script>
+
+</body>
+
+</html>
