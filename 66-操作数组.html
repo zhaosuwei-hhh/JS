@@ -69,6 +69,34 @@
     let arr6 = [1, 2, 5, 9, 10, 'yy']
     arr6.splice()
     document.write(arr6)
+    document.write(`<br>`)
+
+
+
+
+    //4.数组排序--sort
+    // sort，默认按照从小到大排列，但只能比较位数相同的 
+    let arr7 = [1, 2, 5, 9, 7, 6]
+    arr7.sort()
+    document.write(arr7)
+    document.write(`<br>`)
+
+
+    //利用函数进行升序
+    arr7.sort(function (a, b) {
+      return a - b  //说明后面的大
+    })
+    document.write(arr7)
+    document.write(`<br>`)
+    //降序
+    arr7.sort(function (a, b) {
+      return b - a //说明前面的大
+    })
+    document.write(arr7)
+    document.write(`<br>`)
+
+
+
 
 
 

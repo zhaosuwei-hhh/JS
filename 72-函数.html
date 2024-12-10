@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //函数让代码实现复用，节省代码
+    //函数是function的代码块，执行特定任务
+
+    //函数命名规范
+    //1.与变量命名法基本一致
+    //2.尽量使用小驼峰命名法
+    //3.前缀应该是动词
+    //4.命名建议：常用动词约定
+    //can  判断是否可执行某个动作
+    //has  判断是否含义某个值
+    //is  判断是否为某个值
+    //get  获取某个值
+    //set  设置某个值
+    //load  加载某些数据
+
+
+    //函数声明
+    function happy() {
+      for (let i = 1; i <= 9; i++) {
+        for (let j = 1; j <= i; j++) {
+          document.write(`<span> ${j} × ${i} = ${i * j}  </span>`)
+        }
+        document.write(`<br>`)
+      }
+    }
+    //函数调用
+    
+    //不调用不执行
+    //可以多次调用
+    happy()  //注意要加小括号
+    document.write(`<br>`)
+    happy()  //注意要加小括号
+    document.write(`<br>`)
+
+    happy()  //注意要加小括号
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

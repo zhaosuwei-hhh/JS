@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //冒泡排序----从小到大
+    let arr = [1, 2, 9, 7, 6, 5]
+    //  1.一共需要进行的趟数，每趟都能确定一个位置
+    //    6个元素，需要5趟
+    for (let i = 0; i < arr.length - 1; i++) {
+      //2. 每趟次数是arr.length-1-i
+      //第一趟交换5次
+      //第二趟交换4次
+      //第三趟交换3次
+      //第四趟交换2次
+      //第五趟交换1次
+      for (let j = 0; j < arr.length - 1 - i; j++) {
+        if (arr[j] > arr[j + 1]) {
+          let num = arr[j]
+          arr[j] = arr[j + 1]
+          arr[j + 1] = num
+        }
+      }
+    }
+    document.write(arr)
+    document.write(`<br>`)
+
+
+
+
+
+    //冒泡排序----从大到小
+    let arr2 = [15, 2, 20, 7, 32, 5]
+      for (let i = 0; i < arr2.length - 1; i++) {
+        for (let j = 0; j < arr2.length - 1 - i; j++) {
+          if (arr2[j] < arr2[j + 1]) {
+            let num = arr2[j]
+            arr2[j] = arr2[j + 1]
+            arr2[j + 1] = num
+          }
+        }
+      }
+      document.write(arr2)
+      document.write(`<br>`)
+  </script>
+</body>
+
+</html>

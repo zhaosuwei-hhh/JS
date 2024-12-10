@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //求从n到m的累加和
+    //1.函数声明
+    //参数之间要用逗号隔开
+    function sum (n=0,m=0){
+      let sum = 0
+      for(let i=n;i<=m;i++){
+        sum=sum+i
+      }
+      document.write(sum)
+    }
+    //2.函数调用
+    let num1=+prompt('请输入第一个数')
+    let num2=+prompt('请输入第一个数')
+    sum(num1,num2) //实参可以是变量
+  </script>
+</body>
+</html>

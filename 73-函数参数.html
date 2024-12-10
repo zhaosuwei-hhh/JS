@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //求和
+    //1.声明函数
+   
+    function getArrSum(arr=[]){   //括号里面给了形参  给定了一个默认值
+      //一般来说，数组默认为空数组，数字默认为0
+      //先看是否有实参传递，若没有则使用默认值，若有，默认值则不奏效
+      let sum = 0
+          for (let i = 1; i < arr.length; i++) {
+            sum = sum + arr[i]
+            
+          }
+          document.write(`${sum}<br>`)
+
+    }
+    //2.调用函数，将实参传过去
+    getArrSum([1,2,3, 4])
+    getArrSum([5,8,6,4])
+    getArrSum([])  //若没有中括号[]就会报错，因为具体参数不是一个数组，没有数组长度
+    //给定一个空数组，数组长度就为0
+  </script>
+</body>
+</html>
