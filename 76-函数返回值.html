@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //当调用某一个函数，函数会返回一个值
+    //有些函数没有返回值，比如alter
+    //return 数据
+    //1
+    function fit() {
+      return 20    //相当于执行了fit()=20的操作
+    }
+    document.write(fit())
+    document.write(`<br>`)
+
+
+
+    //2
+    function sum(m, n) {
+      return m + n  //return后面的代码不再执行，会立即结束当前函数 
+      // 所以return后面的数据不要换行
+      document.write('高广源')
+
+    }
+    document.write(sum(3, 4))
+    document.write(`<br>`)
+
+
+
+
+    //3
+    //没有return时函数默认返回undefined
+    function happy() {
+
+    }
+    document.write(happy())
+
+
+  </script>
+</body>
+
+</html>
