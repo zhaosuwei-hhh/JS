@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //在不同的作用域下，可能存在变量命名冲突，执行谁？
+    let num2 = 10
+    function day() {
+      let num2 = 20
+      document.write(num2)
+    }
+    day()  //有局部就先找局部，没局部再找全局
+    document.write(`<br>`)
+
+
+    //函数套函数
+    //范围越小，等级越高，重合时等级高的盖住等级低的
+    let num3 = 77
+    function fun() {
+      let num3 = 88
+      function fn() {
+        let num3 = 99
+        document.write(num3)
+      }
+      fn()
+      document.write(`<br>`)
+      document.write(num3)
+    }
+    fun()
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //立即执行函数 ----避免全局变量的污染
+    //第一种写法   (f())();
+    ; (function (x, y) {
+      document.write(x - y)
+    })(1, 2)   //立即执行函数必须要加 ;  加到前面，避免报错
+    //第二个外括号起到调用函数
+    document.write(`<br>`)
+
+
+
+      //第二种写法  (f()());
+      ; (function (m, n) { document.write(m + n) }(2, 3));
+
+  </script>
+</body>
+
+</html>

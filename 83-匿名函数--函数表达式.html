@@ -1,0 +1,47 @@
+<!-- 具名函数 -->
+<!-- function fn (){} -->
+
+<!-- 匿名函数 -->
+<!-- function (){} -->
+<!-- 没有名字的函数，无法直接使用 -->
+<!-- 可以通过函数表达式和立即执行函数来使用 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //函数表达式
+    //将匿名函数赋值给一个变量，通过变量名称来进行调用
+
+    //例1
+    let love = function () {  //把函数赋值给fn
+      document.write('喜欢你高广源')
+    }
+    love()//调用  变量名称+()
+    document.write(`<br>`)
+
+    //例2
+    let Sum = function (x, y) {
+      document.write(x + y)
+    }
+    Sum(1, 2)
+    document.write(`<br>`)
+
+    //函数表达式和具名函数的不同：
+    //具名函数可以在任何地方使用
+    //函数表达式无法在声明前使用
+
+
+
+
+  </script>
+</body>
+
+</html>
