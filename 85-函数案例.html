@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //用户输入秒数，自动输出时分秒
+
+
+
+    //1.用户的输入
+    let second = +prompt('请输入秒数：')
+
+    //2.计算时分秒(封装函数)    进行数字的补0
+    function time(t) {
+      let h = parseInt(t / 60 / 60 % 24)
+      let m = parseInt(t / 60 % 60)
+      let s = parseInt(t % 60)
+      if (h<10){
+        h='0'+h
+      }
+      //  也可以用三元运算符
+      //  h<10 ? '0'+h :h
+      if (m < 10) {
+        m = '0' + m 
+      }
+      if (s < 10) {
+        s = '0' + s
+      }
+      document.write(`转换完毕后是${h}小时${m}分钟${s}秒`)
+    }
+
+    //3.打印输出
+    time (second)
+  </script>
+</body>
+
+</html>

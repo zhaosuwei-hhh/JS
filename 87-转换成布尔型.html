@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    console.log(Boolean('pink'));
+    console.log(Boolean(''));   //字符串中只有空字符串为假
+    console.log('--------------------------------');   
+
+    
+    console.log(Boolean(11));
+    console.log(Boolean(-1));
+      console.log(Boolean(0.1));   
+      console.log(Boolean(0));  //数字里只有0为假
+      console.log('--------------------------------');   
+
+
+    console.log(Boolean(undefined));  //undefined为假
+      console.log(Boolean(null));  //null为假
+    console.log(Boolean(NaN));  //NaN为假
+      console.log(Boolean(false));  //false为假
+      console.log('--------------------------------');   
+
+
+
+      if(true){
+        console.log (11)
+      }
+      if (false) {
+          console.log(11)  //不执行
+        }
+
+
+      // 隐式转换
+      //1.有字符串的加法   (字符串的拼接)
+      console.log('n'+1);
+      
+      //2.减法–（像大多数数学运算一样）只能用于数字，字符串用的话会出现NaN
+      console.log(5-'');  // 它会使空字符串""转换为О  
+      console.log(null-3);   //null经过数字转换之后会变为0
+      
+      //3.undefined经过数字转换之后会变为NaN
+      console.log(undefined -2);  //undefined除了字符串拼接以外，进行任何的操作都是NaN
+
+      //4.NaN进行任何都只会变成NaN
+      console.log(NaN+1);
+      console.log(NaN-1);
+      
+      
+  </script>
+</body>
+
+</html>

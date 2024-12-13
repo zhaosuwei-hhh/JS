@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //逻辑中断只存在于 &&(与，一假则假) 、||(或，一真则真)   满足一定的条件时，会让右边的代码不执行
+    function fn(x, y) {
+      x = x || 0    //代替了括号里面的x=0，y=0
+      y = y || 0
+      document.write(x + y)
+    }
+    fn(3, 4)
+    document.write(`<br>`)
+
+    // &&   左假就中断
+    let age = 18
+    document.write(false && age++)//一假则假  若左边为假，右边代码不再执行，直接略过
+    document.write(`<br>`)
+    document.write(age)  //age++ 没有执行
+    document.write(`<br>`)
+    let age2 =19
+    document.write(true && age2++)//若全部为真  则执行后面的 返回最后一个真值
+      document.write(`<br>`)
+      document.write(age2)  //age++ 执行
+      document.write(`<br>`)
+
+
+
+
+
+    // ||    左真就中断
+    let year = 18
+    document.write(true || year++)  //一真则真   若左边为真，右边代码不再执行
+    document.write(`<br>`)
+    document.write(year)   //year++ 没有执行
+    //若两边都是假   输出右边假
+  </script>
+</body>
+
+</html>
