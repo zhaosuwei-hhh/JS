@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let students = [
+      { name:'小方',  age:19,  hometown: '河南' },
+      { name: '小刘', age: 18, hometown: '东北' },
+      { name: '小高', age: 22, hometown: '江南' }
+    ]
+    for(let i=0;i<students.length;i++){
+      for(let k in students[i]){
+        console.log(students[i][k]);  //是打印这个对象里面全部的键值对的值
+      }
+      console.log(students[i].name);  //打印这个对象中键为name的值
+            
+    }
+   
+  </script>
+</body>
+</html>

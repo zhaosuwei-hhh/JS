@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let obj = {
+      uname:'开心',    //变量名称  要在最后加逗号
+
+      //方法  （在对象外面叫函数，在对象里面叫方法）只在对象里生效
+      song: function(x,y){   //song是方法名称 后面跟冒号 再加一个匿名函数
+        
+        console.log(x+y)
+      },
+      hi: function(){
+        console.log('天天');
+      },
+      ggy: function () {
+        console.log('高广源');
+      }
+      //注：多个方法之间用逗号隔开，最后一个方法后面不用加逗号
+    }
+
+
+
+    //方法调用   对象名.方法名()  document.write
+    obj.song(1,2)  //括号里面是实参
+    obj.hi()       //即使没有参数，也必须加小括号
+
+    //方法增删改查
+
+    //1.增加或更改
+    obj.happy = function(){
+      console.log('开心');
+    }
+    //2.删除    不能加括号
+    delete obj.ggy
+    //3.查找
+    obj.happy()
+    console.log(obj);
+    
+
+  </script>
+</body>
+</html>
