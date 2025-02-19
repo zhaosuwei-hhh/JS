@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //16进制颜色格式为:‘#ffffff’其中f可以是任意О-f之间的字符
+    // 需要用到数组，let arr = ['0', '1','2', '3', '4', '5', '6','7' , '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+    // rgb颜色格式为: 'rgb(255,255,255)′其中255可以是任意O-255之间的数字
+    //若函数接收的是true或无参数，则输出16进制的颜色    若为false，则输出rgb颜色
+
+    //1.定义函数
+    function getrandom(flag) {
+      //1.1  true  返回#ffffff
+      if (flag) {
+        //方法1
+        let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f']
+        let a = arr[Math.floor(Math.random() * 16)]
+        let b = arr[Math.floor(Math.random() * 16)]
+        let c = arr[Math.floor(Math.random() * 16)]
+        let d = arr[Math.floor(Math.random() * 16)]
+        let e = arr[Math.floor(Math.random() * 16)]
+        let f = arr[Math.floor(Math.random() * 16)]
+         //要借助反引号
+
+        //方法2
+        let str = '#'
+        let arr2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f']
+        for (let i = 1; i <= 6; i++) {
+          let random = Math.floor(Math.random() * 16)
+          str = str + arr2[random]
+        }
+
+        return [str ,`#${a}${b}${c}${d}${e}${f}`] 
+      }
+      //1.2  false  返回rgb(255,255,255)
+      else {
+        let r = Math.floor(Math.random() * 256)
+        let g = Math.floor(Math.random() * 256)
+        let b = Math.floor(Math.random() * 256)
+        return `rgb(${r},${g},${b})`      //要借用反引号
+      }
+    }
+    //2.调用函数(记住不要写到函数里面去)
+    console.log(getrandom(false))
+    console.log(getrandom(true))
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!-- 变量声明用 let const
+ let 用于可变变量     const 用于不可变变量，注：可以用于变化的数组、对象这种复杂数据类型
+ 首用const   当变量可变时再修改成let -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //简单数据类型
+    const num=20
+    num=num+1       //栈中位置改变，报错，需改成let
+
+
+    
+    //数组对象同理  （建议数组和对象用const来声明）
+    const arr=['刘胜莹','高广源','赵素葳']
+    arr.push('开心')  //添加或删除数组元素，堆中位置不变，不报错
+    arr = [1,2,3,4]  //直接更改了数组（空数组也是新地址），堆中位置改变，报错，需要改成let
+  </script>
+</body>
+</html>

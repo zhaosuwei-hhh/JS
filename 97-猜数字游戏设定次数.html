@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1.随机生成一个数字
+      function getRandom(n, m) {
+        return Math.floor(Math.random() * (m - n + 1) + n)
+      }
+      let random = getRandom(1, 10)
+      //2.设定三次，三次以后直接退出
+      let flag = true
+      for(let i=1;i<=3;i++){
+        //用户输入一个值
+        let num = +prompt('请输入1到10一个数字')
+        //比较然后输出
+        if (num > random) {
+          alert('数字猜大了，请继续猜')
+        }
+        else if (num < random) {
+          alert('数字猜小了，请继续猜')
+        }
+        else {
+          flag = false //开关变量，保证猜对一行直接退出，不再弹出'次数已经用完'
+          alert('猜对了')
+          break
+        }
+      }
+      //要写到for循环的外面
+      if(flag) {
+        alert('次数已经用完')
+      }
+  </script>
+</body>
+</html>
