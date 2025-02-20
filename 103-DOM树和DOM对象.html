@@ -1,0 +1,31 @@
+<!-- API 就是利用js去操作html和浏览器
+分为DOM(文档对象模型)和BOM(浏览器) -->
+
+<!-- DOM操作网页内容 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>123</div>
+  <script>
+     //DOM树
+    //将HTML文档以树状结构直观的表现出来，我们称之为文档树或 DOM 树
+    // 描述网页内容关系的名词
+    //作用: 文档树直观的体现了标签与标签之间的关系
+
+
+    
+    //DOM对象:浏览器根据html标签生成的JS对象
+        //所有的标签属性都可以在这个对象上面找到修改这个对象的属性会自动映射到标签身上
+  const div = document.querySelector('div')
+        //打印对象 ------dir是专门用来打印对象的 ----typeof div 是用来检测div数据类型的
+   console.dir(div)  //DOM对象
+
+  </script>
+</body>
+</html>

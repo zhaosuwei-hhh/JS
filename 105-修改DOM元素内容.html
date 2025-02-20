@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box">哈哈哈哈哈</div>
+  <script>
+    //1.获取DOM元素
+    const box = document.querySelector('.box')
+    //2.修改文字内容 两种方式
+    //2.1----对象.innerText  属性
+    console.log(box.innerText)  //获取输出文字内容
+    box.innerText = '<strong>嘻嘻嘻</strong>'    //修改内容---只显示纯文本，不解析标签
+
+    //2.2----对象.innerHTML  属性    常用
+    box.innerHTML = '<strong>啦啦啦</strong>'    //修改内容---解析标签
+
+    
+  </script>
+</body>
+</html>
