@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="./刘1.jpg" alt="" width="350px">
+  
+  <script>
+    //取随机数1到4
+    function getRandom(n, m) {
+        return Math.floor(Math.random() * (m - n + 1) + n)
+      }
+    //获取图片元素
+    const img = document.querySelector('img')
+    //调用函数，得到随机数1到4
+    const random = getRandom(1, 4)  
+    //更换图片路径
+    img.src = `./刘${random}.jpg`  //切记要用反引号
+    
+  </script>
+</body>
+</html>
