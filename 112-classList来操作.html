@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      color: pink;
+    }
+    .red {
+      color: aqua;
+      background-color: pink;
+    }
+    .pink {
+      background-color: rgb(160, 219, 229);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">许我以春朝</div>
+  <script>
+    //解决了类名覆盖的问题
+    //最常用的
+
+
+    //通过classList 来添加
+    //1.获取元素
+    const box = document.querySelector('.box')
+
+    //2.修改样式---追加类 
+    // --名称.classList.add('类名') 所要添加的类名，注意不加. 它是字符串
+    box.classList.add('red')
+
+    //3.修改样式---删除类
+    //--名称.classList.remove('类名') 所要添加的类名，注意不加.
+    box.classList.remove('red')
+    
+    //4.修改样式---切换类  （有就删掉，没有就添加上）
+    box.classList.toggle('pink')
+
+
+  </script>
+</body>
+</html>

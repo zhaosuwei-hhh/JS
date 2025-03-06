@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>  
+  <script>
+    //适用于修改样式比较少的情况--生成行内样式
+
+
+
+
+    //1.获取元素
+    const box = document.querySelector('.box')   //类名要加.在前
+    //2.修改样式属性
+    //通过style来修改样式    对象.style.样式属性 = '值'
+    box.style.width = '200px'  //因为有px，所以要加单引号  不加px的话没有效果
+    //写成background-color时不起作用，采用小驼峰命名法，进行相应的大写
+    box.style.backgroundColor = 'blue'
+    box.style.border = '3px solid pink'
+    box.style.borderTop = '5px solid red'  //borderTop
+  </script>
+</body>
+</html>

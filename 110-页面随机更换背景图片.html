@@ -8,12 +8,14 @@
     body {
       background: url(./image1.png) no-repeat
     }
+    
   </style>
 </head>
 
 <body>
+  
   <script>
-   
+   //1.通过style来修改样式
     console.log(document.body);
     //定义随机数函数
     function getRandom(n, m) {
@@ -24,6 +26,9 @@
     //修改属性  document.body 是对象
     document.body.style.backgroundImage=`url(./image${random}.png)`
     //改变路径是url，注意要用反引号
+
+    
+    
     
   </script>
 </body>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 200px;
+      background-color: pink;
+    }
+    .box {
+      border: 3px solid blue;
+      width: 200px;
+      height: 300px;
+      border-top: green;
+      background-color: yellow;
+    } 
+  </style>
+</head>
+<body>
+  <div></div>
+  <script>
+    //获取元素
+    const div = document.querySelector('div')
+    //添加类名 因为class是个关键字 所以用className代替class  新值覆盖旧值
+    div.className = 'box'
+    //若div本身有类名 则写成 div.className = '类名 box'
+    //比如 div.className = 'nav box'  这个时候类名会进行覆盖
+  </script>
+</body>
+</html>

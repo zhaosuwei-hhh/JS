@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .active {
+    color: rgb(242, 17, 17);
+  }
+  </style>
+</head>
+
+<body>
+  <div class="slider">
+    <div class="slider-wrapper">
+      <img src="./image1.png" alt="">
+    </div>
+    <div class="slider-footer">
+      <p>哈哈哈哈哈哈</p>
+      <ul class="'slider-indicator">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="toggle">
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    //1.初始数据
+    const sliderData = [
+      { url: './image1.png', title: '月明' ,color:'pink'},  //要用逗号来分割
+      { url: './image2.png', title: '星稀' , color: 'blue' },
+      { url: './image3.png', title: '乌雀南飞' ,color: 'green' }
+    ]
+    //2.生成随机数的函数
+    function getRandom(n, m) {
+      return Math.floor(Math.random() * (m - n + 1) + n)
+    }
+    //3.生成一个随机数来表示数组的下标
+    const random = getRandom(0, 2)
+    console.log(sliderData[random]);
+
+    //4.获取图片
+    const img = document.querySelector('.slider-wrapper img')
+
+    //5.修改图片路径 = 对象.url
+    img.src = sliderData[random].url
+
+    //6.获取文字 
+    const p = document.querySelector('.slider-footer p')
+
+    //7.修改文字 = 对象.title
+    p.innerHTML= sliderData[random].title
+
+    //8.修改背景颜色 
+    const footer= document.querySelector('.slider-footer')
+    footer.style.backgroundcolor = sliderData[random].color
+
+    //9.小圆点
+    const li = document.querySelector(`.slider-indicator li:nth-child(${random+1})`)
+    li.classList.add('active')  //当前小li添加active类来变颜色
+  </script>
+</body>
+
+</html>
