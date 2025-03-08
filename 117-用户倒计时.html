@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 案例----用户阅读协议倒计时 -->
+   <textarea name="" id="" cols="15" rows="10">
+    用户注册协议
+    欢迎注册成为京东用户!在您注册过程中，您需要完成我们的注册流程并通过【请您注意】如果您不同意以下协议全部或任何条款约定，请您停止注册。
+   </textarea>
+   <br>
+   <button class="btn" disabled>我已阅读用户协议(3)</button>
+   <!-- <button></button>是双标签，获取值要用innerhtml -->
+
+
+  <script>
+    let i =1
+    let n = setInterval(function(){
+      i++
+      document.write(`${i}`)
+    },1000)  //开启
+    clearInterval(n)  //关闭
+
+
+    //案例----用户阅读协议倒计时
+
+    //1.获取元素
+    const  btn = document.querySelector('.btn')
+    //2.倒计时
+
+    let j = 3
+    let m =setInterval(function(){
+      j--
+      btn.innerHTML = `我已阅读用户协议(${j})`     //倒计时开始
+
+      //注意  ！  if要写在函数里面
+      if (j == 0) {   //---注意判断是==  赋值是=
+        clearInterval(m)      //倒计时结束
+
+        btn.disabled = false  //未设定的情况下是不禁用，所以要在button的结构里加上disabled
+        btn.innerHTML = '同意协议'   //倒计时结束后改成同意
+      }
+      },1000)
+    
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 属性分为标准属性和自定义属性 -->
+   <!-- div{$}*n -->
+    <!-- 自定义属性，要以data来开头 -->
+   <div data-id = "1" data-spm = "xixi">1</div>
+   <div data-id = "2">2</div>
+   <div data-id = "3">3</div>
+   <div data-id = "4">4</div>
+   <div data-id = "5">5</div>
+
+
+  <script>
+    const one = document.querySelector('div')  //默认会返回第一个匹配的div
+    //console.log(one.data-id)  会报错
+    console.log(one.dataset)  //dataset集合
+    console.log(one.dataset.id)  //dataset集合里面的data-id
+    console.log(one.dataset.spm)  //dataset集合里面的data-spm
+    
+    
+    
+  </script>
+</body>
+</html>

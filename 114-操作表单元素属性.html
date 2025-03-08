@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <!-- 文本框 -->
+  <input type="text" value="哈哈" class="one">  
+
+  <!-- 复选框 -->
+  <input type="checkbox" class="two" >
+
+  <!-- 按钮 -->
+  <button disabled = "disabled">点击</button>
+  <!-- disabled-----禁用吗 -->
+  <!-- <button disabled>点击</button>  属性和值相同时，只用写一个，不需要写完整 -->
+
+
+  <script>
+    //1.获取元素
+    const uname = document.querySelector('.one')
+
+    //2.获取值   innerHTML获取内容仅限于普通元素，对于表单元素要用 表单.value
+    console.log(uname.value)
+    console.log(uname.type)
+    //console.log(uname.innerHTML)    ----不可行，为空，得不到表单内容
+    
+    //3.修改值
+    uname.value = '天青色等烟雨'    //---只用加引号，不用加括号
+    uname.type = 'password'      //---变成密码形式，看不见
+
+
+
+    //------------------------------------------------
+    //表单属性中添加就有效果，移除就没效果
+    // 一律用布尔值来表示，true表示添加、false表示移除
+    const input = document.querySelector('.two')
+    console.log(input.checked)  //---属于没有添加的状态,默认是false
+    input.checked = true  //修改属性值---true、false是布尔值，不是文本，不需要加引号
+
+    //input.checked = 'true' ---仍然是可以勾选上，是因为只有空字符串才为false，其他均为true
+    //但在控制里面还是false
+
+
+
+    //-------------------------------------------------
+    const button=document.querySelector('button')
+    console.log(button.disabled)   //---没有disabled时，默认是false,不禁用
+    button.disabled = false   //---点击不禁用
+
+  </script>
+</body>
+</html>

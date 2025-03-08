@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //网页中经常会需要一种功能: 每隔一段时间需要自动执行一段代码
+    //不需要我们手动去触发例如: 网页中的倒计时
+    //要实现这种需求，需要定时器函数
+
+    //开启定时器----setInterval(函数,间隔时间)--间隔时间以毫秒为单位  1s=1000ms
+    //1.匿名函数  --要加小括号
+    let n = setInterval(function () {
+      console.log('ggy真变态') //别忘记文本要带引号
+    }, 1000)
+    //2.有名函数  --不要加小括号
+    function fn() {
+      console.log('开心快乐每一天')
+    }
+    let m = setInterval(fn, 1000)  //---这里的fn不用加()
+    //-----------------------------------
+
+
+    //关闭定时器
+    //每个定时器都有一个编号，独一无二
+    //1.获取编号 ----let 变量名 = setInterval(函数,间隔时间)
+    let p = setInterval(fn, 1000)  //这属于重新又开了个定时器
+    let q = setInterval(function () {
+      console.log('ggy真变态') //别忘记文本要带引号
+    }, 1000)
+    console.log(n)
+    console.log(m)
+    console.log(p)
+    console.log(q)
+
+    //2.关闭 ----clearInterval(变量)
+    clearInterval(n)
+    clearInterval(m)
+    clearInterval(p)
+    clearInterval(q)
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
