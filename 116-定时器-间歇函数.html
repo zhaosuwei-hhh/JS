@@ -17,7 +17,7 @@
     //1.匿名函数  --要加小括号
     let n = setInterval(function () {
       console.log('ggy真变态') //别忘记文本要带引号
-    }, 1000)
+    }, 100000000000000)
     //2.有名函数  --不要加小括号
     function fn() {
       console.log('开心快乐每一天')
@@ -33,10 +33,10 @@
     let q = setInterval(function () {
       console.log('ggy真变态') //别忘记文本要带引号
     }, 1000)
-    console.log(n)
-    console.log(m)
-    console.log(p)
-    console.log(q)
+    console.log(n)  //--得到的是1
+    console.log(m)  //--得到的是2
+    console.log(p)  //--得到的是3
+    console.log(q)  //--得到的是4
 
     //2.关闭 ----clearInterval(变量)
     clearInterval(n)
